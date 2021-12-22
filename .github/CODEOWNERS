@@ -1,0 +1,8 @@
+# This is a comment.
+# Each line is a file pattern followed by one or more owners.
+
+# Esses proprietários serão os proprietários padrão para tudo no
+# repositório. A menos que uma correspondência posterior tenha precedência,
+# @lucasvigano e @vrsoftbr/pdv serão solicitados para
+# revisão quando alguém abrir uma pull request.
+*       @lucasvigano
