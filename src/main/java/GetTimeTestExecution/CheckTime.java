@@ -31,14 +31,13 @@ public class CheckTime {
     }
 
     private List<File> getFiles() throws Exception {
-//        String i_path = "\\build\\test-results\\test\\";
-        String i_path = "C:\\git\\4.1\\VRConcentrador\\build\\test-results\\test";
+        String path = "\\build\\test-results\\test\\";
 
-        if (!Arquivo.exists(i_path)) {
-            throw new Exception("Path vazio ou nao encontrado. " + i_path);
+        if (!Arquivo.exists(path)) {
+            throw new Exception("Path vazio ou nao encontrado. " + path);
         }
 
-        File diretorio = new File(i_path);
+        File diretorio = new File(path);
         File arquivos[] = diretorio.listFiles();
 
         if (arquivos == null || arquivos.length == 0) {
