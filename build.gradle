@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+mainClassName = 'GetTimeTestExecution.Main'
+
+repositories {
+    mavenCentral()
+    maven() {
+        name = 'VRFramework'
+        url = "https://maven.pkg.github.com/vrsoftbr/vrframework"
+        credentials {
+            username = project.findProperty("github.user") ?: System.getenv("USERNAME")
+            password = project.findProperty("github.token") ?: System.getenv("TOKEN")
+        }
+    }
+}
+
+dependencies {
+    implementation 'br.com.vrsoftware:vrframework:4.1.+'
+    implementation 'org.sonarsource.sonar-runner:sonar-runner:2.5.1'
+    implementation 'commons-io:commons-io:2.6'
+    testImplementation     'junit:junit:4.13'
+}
